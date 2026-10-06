@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "a backend",
   "type": "module",
+  "scripts":{
+    "dev":"nodemon -r dotenv/config --experimental-json-modules src/index.js"
+  },
   "keywords": [
     "javascript",
     "backend"
@@ -10,11 +13,13 @@
   "license": "ISC",
   "author": "Aranb",
   "main": "index.js",
-  "scripts": {
-    "dev": "nodemon src/index.js"
-  },
   "devDependencies": {
     "nodemon": "^1.14.10",
     "prettier": "^3.9.9"
+  },
+  "dependencies": {
+    "dotenv": "^18.0.5",
+    "express": "^5.2.1",
+    "mongoose": "^9.11.0"
   }
 }
