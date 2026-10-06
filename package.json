@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "description": "a backend",
   "type": "module",
-  "scripts":{
-    "dev":"nodemon -r dotenv/config --experimental-json-modules src/index.js"
+  "scripts": {
+    "dev": "nodemon -r dotenv/config --experimental-json-modules src/index.js"
   },
   "keywords": [
     "javascript",
@@ -18,8 +18,13 @@
     "prettier": "^3.9.9"
   },
   "dependencies": {
+    "bcrypt": "^6.0.0",
+    "cookie-parser": "^1.4.7",
+    "cors": "^2.8.6",
     "dotenv": "^18.0.5",
     "express": "^5.2.1",
-    "mongoose": "^9.11.0"
+    "jsonwebtoken": "^9.0.3",
+    "mongoose": "^9.11.0",
+    "mongoose-paginate-v2": "^1.9.5"
   }
 }
