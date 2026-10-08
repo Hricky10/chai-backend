@@ -31,7 +31,7 @@ const userschma=new Schema(
             type: String,
             required: true,
         },
-        coverimage:{
+        coverImage:{
             type:String,
         },
         watchhistory:[
@@ -57,7 +57,7 @@ const userschma=new Schema(
 userschma.pre("save", async function(next){
     if(!this.isModified("password")) return next();
      
-    this.password=bcrypt.hash(this.password,10)
+    this.password=await bcrypt.hash(this.password,10)
     next()
 })
 
@@ -95,4 +95,4 @@ userschma.methods.generateRefreshToken=function(){
 }
 
 
-export const user=mongoose.model("Users",userschma)
+export const User=mongoose.model("Users",userschma)

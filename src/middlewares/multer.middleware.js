@@ -1,5 +1,5 @@
-import multer from "multer" 
-const crypto = require('crypto')
+import multer from "multer";
+import crypto from "crypto";
 
 const storage = multer.diskStorage({
   destination: function (req, file, cb) {
